@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Contact | Simple Project</title>
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
-    <div class="area">
-        <!-- Header Start Here -->
-        <div class="header fix">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo">
-                </a>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+<?php
+
+/*
+
+Template Name: Template Contact
+
+ */
+
+get_header(); ?>
         <!-- Header End Here -->
 
         <!-- Page Banner Start Here -->
@@ -70,10 +46,4 @@
         <!-- Map End Here -->
 
         <!-- Footer Start Here -->
-        <div class="footer">
-            <p>&copy; 2021 All rights reserved.</p>
-        </div>
-        <!-- Footer End Here -->
-    </div>
-</body>
-</html>
+        <?php get_footer(); ?>
