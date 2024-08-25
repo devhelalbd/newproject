@@ -19,13 +19,15 @@
                 </a>
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'main-menu',
+                    'container'            => 'div',
+                    'container_class'      => 'menu-container-class',
+                    'container_id'         => 'menu-container-id',
+                    'menu_class'           => 'menu-class',
+                    'menu_id'              => 'menu-id',
+                )); ?>
+                
             </div>
         </div>
         <!-- Header End Here -->
