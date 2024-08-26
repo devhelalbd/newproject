@@ -355,3 +355,17 @@ h6 {
   gap: 10px;
   display: flex;
 }
+
+/* single-post */
+.single-blog-post{
+  display: flex;
+  gap: 40px;
+}
+
+.single-post-content{
+  width: 62%;
+  padding-top: 30px;
+}
+.single-blog-post .about-menu{
+  width: 35%;
+}

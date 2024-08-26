@@ -11,9 +11,10 @@
                          <!-- <?php //the_post_thumbnail(); ?> -->
                          <img src="<?php the_post_thumbnail_url(); ?>" alt="Service 1">
                          <div class="blog-meta">
-                              <a href="">admin</a>
-                              <a href="">3 septembar</a>
-                              <a href="">5 comments</a>
+                              
+                              <?php the_author_posts_link(); ?>
+                              <a href=""><?php the_date(); ?></a>
+                              <a href=""><?php the_category(); ?></a>
                          </div>
                          <p><?php the_excerpt(); ?></p>
                          <a href="<?php the_permalink(); ?>">Read More</a>
