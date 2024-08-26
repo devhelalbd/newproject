@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 
-<div class="page">
+<div class="test-page">
      <div class="page-left">
           <h4><?php the_title(); ?></h4>
           <?php the_content(); ?>
      </div>
-     <div class="page-sidebar">
-          <?php dynamic_sidebar('sidebar-1') ?>
+     <div class="test-page-sidebar about-menu">
+          <?php dynamic_sidebar('sidebar-1'); ?>
      </div>
 </div>
 

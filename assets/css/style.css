@@ -149,7 +149,7 @@ h6 {
   margin-right: 30px;
 }
 .about-left h4,
-.about-menu h4 {
+.about-menu h4, .page-left h4 {
   text-transform: capitalize;
   font-size: 35px;
   margin-bottom: 18px;
@@ -321,4 +321,20 @@ h6 {
   height: 300px;
 }
 
+/* Page php CSS */
 
+.test-page{
+  overflow: hidden;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 50px 0;
+}
+.page-left{
+  width: 62%;
+}
+.test-page-sidebar{
+  width: 35%;
+}
