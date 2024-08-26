@@ -19,3 +19,18 @@ li::marker{
      display: none;
      font-size: 0;
 }
+/* blogs CSS  */
+.blog-post{
+     display: flex;
+     gap: 20px;
+     justify-content: space-between;
+   }
+.single-blog{
+     width: 32%;
+}
+.blog-post a{
+     text-decoration: none;
+}
+.blog-meta{
+     gap: 10px;
+}

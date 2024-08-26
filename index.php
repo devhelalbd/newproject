@@ -24,6 +24,8 @@
         </div>
         <!-- About End Here -->
 
+        <?php get_template_part('template-parts/content', 'blogs') ?>
+
 
         <!-- Start Footer Here -->
 
