@@ -1,8 +1,13 @@
 <?php
 
 function new_project(){
+
      // text domain
      load_theme_textdomain('newproject');
+
+     // Title
+     add_theme_support('title-tag');
+
      // register nav menu
      register_nav_menus(array(
           'main-menu' => __('Main Menu', 'newproject'),

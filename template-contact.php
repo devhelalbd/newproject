@@ -10,7 +10,7 @@ get_header(); ?>
         <!-- Header End Here -->
 
         <!-- Page Banner Start Here -->
-        <div class="page-banner" style="background-image: url('img/page-bannar.jpg');">
+        <div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/page-bannar.jpg');">
             <h2>contact us</h2>
         </div>
         <!-- Page Banner End Here -->

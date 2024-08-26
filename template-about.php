@@ -11,7 +11,7 @@ get_header(); ?>
         <!-- Header End Here -->
 
         <!-- Page Banner Start Here -->
-        <div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/page-bannar.jpg');">
+        <div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/page-bannar.jpg');">
             <h2>about us</h2>
         </div>
         <!-- Page Banner End Here -->
@@ -27,14 +27,7 @@ get_header(); ?>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto quaerat praesentium impedit. Aut libero, magnam non totam consectetur velit reprehenderit soluta officiis minima tempora.</p>
             </div>
             <div class="about-menu">
-                <h4>sidebar menu</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+                <?php dynamic_sidebar('sidebar-1'); ?>
             </div>
         </div>
         <!-- About End Here -->
