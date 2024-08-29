@@ -8,7 +8,7 @@ function new_project(){
      // Title
      add_theme_support('title-tag');
 
-     //
+     
      add_theme_support('post-thumbnails');
 
      // register nav menu
