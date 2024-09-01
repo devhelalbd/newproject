@@ -9,6 +9,7 @@
                <p>Description: <?php the_author_meta('description'); ?></p>
                <p><b>Email:</b> <?php the_author_meta('email'); ?></p>
                <p><b>Display Name:</b> <?php the_author_meta('display_name'); ?></p>
+               <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="">
           </div>
 
           <?php get_template_part('template-parts/content', 'blogs'); ?>
