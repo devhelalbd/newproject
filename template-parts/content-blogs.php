@@ -9,7 +9,7 @@
                     <div class="single-blog">
                          <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                          <!-- <?php //the_post_thumbnail(); ?> -->
-                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Service 1">
+                         <img class="post-thumbnail" src="<?php the_post_thumbnail_url(); ?>" alt="Service 1">
                          <div class="blog-meta">
                               
                               <?php the_author_posts_link(); ?>
