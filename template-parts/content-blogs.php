@@ -13,8 +13,8 @@
                          <div class="blog-meta">
                               
                               <?php the_author_posts_link(); ?>
-                              <a href=""><?php the_date(); ?></a>
-                              <a href=""><?php the_category(); ?></a>
+                              <a href=""><?php the_date('M d'); ?></a>
+                              <?php the_category(); ?>
                          </div>
                          <p><?php the_excerpt(); ?></p>
                          <a href="<?php the_permalink(); ?>">Read More</a>

@@ -344,6 +344,7 @@ h6 {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+  
 }
 .single-blog{
   width: 32%;
@@ -360,14 +361,18 @@ h6 {
 .single-blog-post{
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
+.single-blog-post .blog-left{
+  width: 60%;
+}
+.single-blog-post .about-menu{
+  width: 30%;
+}
 .single-post-content{
   width: 62%;
   padding-top: 30px;
-}
-.single-blog-post .about-menu{
-  width: 35%;
 }
 .blog-left .blog-post{
   display: grid !important;
@@ -382,4 +387,19 @@ h6 {
   object-fit: cover;
   border: 2px dashed #000;
   padding: 4px;
+}
+.single-blog-post .search{
+  width: 100%;
+  padding-top: 40px;
+}
+
+/* search-reslut-post */
+.search-reslut-post{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding-top: 40px;
+}
+.search-reslut-post .single-blog{
+  width: 100%;
 }
