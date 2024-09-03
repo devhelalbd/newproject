@@ -34,3 +34,8 @@ li::marker{
 .blog-meta{
      gap: 10px;
 }
+
+/* Home template 2  */
+.content h1{
+     padding: 20px 0px;
+}
