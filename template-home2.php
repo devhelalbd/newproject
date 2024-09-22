@@ -26,17 +26,33 @@ get_header(); ?>
             // 'category_name' => 'book'
 
             //meta query
-            'meta_query' => array(
+            // 'meta_query' => array(
+            //     'relation' => 'OR',
+            //     array(
+            //         'key' => 'size',
+            //         'value' => 'b',
+            //         'compare' => '='
+            //     ),
+            //     array(
+            //         'key' => 'price',
+            //         'value' => '100',
+            //         'compare' => '<'
+            //     )
+            // )
+
+            // tax query
+            'tax_query' => array(
                 'relation' => 'OR',
                 array(
-                    'key' => 'size',
-                    'value' => 'b',
-                    'compare' => '='
+                    'taxonomy' => 'category',
+                    'field' => 'slug',
+                    'terms' => 'book',
+                    'operator' => 'IN'
                 ),
                 array(
-                    'key' => 'price',
-                    'value' => '100',
-                    'compare' => '<'
+                    'taxonomy' => 'tag',
+                    'field' => 'slug',
+                    'terms' => 'song'
                 )
             )
         );
