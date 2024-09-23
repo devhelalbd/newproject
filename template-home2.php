@@ -10,7 +10,7 @@ get_header(); ?>
 
        
 <div class="content">
-    <?php
+    <!-- <?php
         $args = array(
             'post_type' => 'post',
             'posts_per_page' => 10,
@@ -71,7 +71,37 @@ get_header(); ?>
             </div>
         <?php
         }
-    ?>
+    ?> -->
+    <h1>Events</h1>
+    <br>
+    <div class="events">
+        <?php 
+            $args = array(
+                'post_type' => 'events',
+                'posts_per_page' => 3
+            );
+
+            $query = new WP_Query($args);
+            while($query -> have_posts()){
+                $query -> the_post();
+                ?>
+                    <div class="single-events">
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                        <h4><?php the_title(); ?></h4>
+                        <div class="meta">
+                            <ul>
+                                <li><i class='fas fa-map-marker-alt'></i><?php the_field('location') ?></li>
+                                <li><i class='far fa-calendar-check'></i><?php the_field('date') ?></li>
+                            </ul>
+                        </div>
+                        <p><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>">Read More</a>
+                    </div>
+                <?php
+            }
+        ?>
+    
+    </div>
 </div>
 
 

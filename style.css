@@ -43,3 +43,19 @@ li::marker{
 .content h1{
      padding: 20px 0px;
 }
+
+/* events css */
+.events {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     padding: 50px 0px;
+ }
+ .single-events{
+     padding: 20px;
+     border: 1px dashed red;
+ }
+ .single-events img{
+     height: 300px;
+     object-fit: cover;
+ }
