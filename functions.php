@@ -128,14 +128,37 @@ function add_acf_columns ( $columns ) {
    /*
  	* Add sortable columns
    */
-  function my_column_register_sortable($columns){
-	$columns['location'] = 'loaction';
+ // Register the sortable columns
+function my_column_register_sortable($columns) {
+	$columns['location'] = 'location';
 	$columns['event_date'] = 'event_date';
-
+ 
 	return $columns;
-  }
-
-  add_filter('manage_events_sortable_columns', 'my_column_register_sortable');
+ }
+ add_filter('manage_edit-events_sortable_columns', 'my_column_register_sortable');
+ 
+ // Define custom sorting behavior for ACF fields
+ function my_custom_orderby($query) {
+	if(!is_admin()) {
+	    return;
+	}
+ 
+	$orderby = $query->get('orderby');
+ 
+	// Sort by ACF field 'location'
+	if('location' == $orderby) {
+	    $query->set('meta_key', 'location'); // ACF field name
+	    $query->set('orderby', 'meta_value');
+	}
+ 
+	// Sort by ACF field 'event_date'
+	if('event_date' == $orderby) {
+	    $query->set('meta_key', 'event_date'); // ACF field name
+	    $query->set('orderby', 'meta_value');
+	}
+ }
+ add_action('pre_get_posts', 'my_custom_orderby');
+ 
 
 
 
