@@ -86,7 +86,7 @@ function wtd_cpt(){
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'Event' ),
+		'rewrite'            => array( 'slug' => 'events' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -99,5 +99,45 @@ function wtd_cpt(){
 }
 
 add_action('init', 'wtd_cpt');
+/*
+ * Add columns to events post list
+ */
+function add_acf_columns ( $columns ) {
+	return array_merge ( $columns, array ( 
+	  'location' => __ ( 'Event Location' ),
+	  'event_date' => __ ( 'Event Date' )
+	) );
+   }
+   add_filter ( 'manage_events_posts_columns', 'add_acf_columns' );
+
+ /*
+ * Add columns to events post list
+ */
+   function events_custom_column ( $column, $post_id ) {
+	switch ( $column ) {
+	  case 'location':
+	    echo get_post_meta ( $post_id, 'location', true );
+	    break;
+	  case 'event_date':
+	    echo get_post_meta ( $post_id, 'event_date', true );
+	    break;
+	}
+   }
+   add_action ( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 );
+
+   /*
+ 	* Add sortable columns
+   */
+  function my_column_register_sortable($columns){
+	$columns['location'] = 'loaction';
+	$columns['event_date'] = 'event_date';
+
+	return $columns;
+  }
+
+  add_filter('manage_events_sortable_columns', 'my_column_register_sortable');
+
+
+
 
 ?>

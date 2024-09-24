@@ -85,7 +85,7 @@ get_header(); ?>
             while($query -> have_posts()){
                 $query -> the_post();
                 ?>
-                    <div class="single-events">
+                    <div class="single-event">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                         <h4><?php the_title(); ?></h4>
                         <div class="meta">

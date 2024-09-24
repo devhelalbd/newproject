@@ -51,11 +51,11 @@ li::marker{
      gap: 20px;
      padding: 50px 0px;
  }
- .single-events{
+ .single-event{
      padding: 20px;
      border: 1px dashed red;
  }
- .single-events img{
+ .single-event img{
      height: 300px;
      object-fit: cover;
  }
