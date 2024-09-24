@@ -92,6 +92,15 @@ get_header(); ?>
                             <ul>
                                 <li><i class='fas fa-map-marker-alt'></i><?php the_field('location') ?></li>
                                 <li><i class='far fa-calendar-check'></i><?php the_field('date') ?></li>
+                                <li><?php $terms = get_the_terms(get_the_ID(), 'event_category');
+                                    foreach($terms as $term){
+                                        $link = get_term_link($term);
+                                        ?>
+                                            <a href="<?php echo $link ?>"><?php echo $term -> name. ' '; ?></a>
+                                        <?php
+                                    }
+                                ?>
+                                </li>
                             </ul>
                         </div>
                         <p><?php the_excerpt(); ?></p>

@@ -99,6 +99,21 @@ function wtd_cpt(){
 }
 
 add_action('init', 'wtd_cpt');
+
+/*
+ * add category
+ */
+function events_taxonomy(){
+	register_taxonomy('event_category', 'events', array(
+		'label' => __('Category', 'newproject'),
+		'rewrite' => array('slug' => 'event-category'),
+		'hierarchical' => true,
+		'public' => true
+	));
+}
+
+add_action('init', 'events_taxonomy');
+
 /*
  * Add columns to events post list
  */
